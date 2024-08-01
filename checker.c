@@ -20,9 +20,10 @@ int batteryIsOk(float temperature, float soc, float chargeRate) {
      }
   return 0;
   */
- int tempratureOK(float temperature1);
+ /*int tempratureOK(float temperature1);
  int socOK(float soc1);
  int chargeRateOK(float chargeRate1);
+*/
  int tempratureOK(float temperature1)
 {
   if (temperature1 < 0 || temperature1 > 45)
