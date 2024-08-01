@@ -6,25 +6,17 @@ int batteryIsOk(float temperature, float soc, float chargeRate) {
   value = (temperature < 0 || temperature > 45)?1:(soc < 20 || soc > 80)?2:(chargeRate > 0.8)?3:4;
    switch (value )
     case 1:
-     {
     printf("Temperature out of range!\n");
-    return 0;
-     }
   case 2:
-    {
     printf("State of Charge out of range!\n");
-    return 0;
-    }
   case 3:
-    {
    printf("Charge Rate out of range!\n");
-    return 0;
-    }
-case default:
-  {
+  break;
+  case default:
     return 1;
-  }
-break;
+    break;
+  return 0;
+  
 }
 
 int main() {
