@@ -20,10 +20,10 @@ int batteryIsOk(float temperature, float soc, float chargeRate) {
      }
   return 0;
   */
-static int tempratureOK(float temperature1);
-static int socOK(float soc1);
-static int chargeRateOK(float chargeRate1);
-static int tempratureOK(float temperature1)
+ int tempratureOK(float temperature1);
+ int socOK(float soc1);
+ int chargeRateOK(float chargeRate1);
+ int tempratureOK(float temperature1)
 {
   if (temperature1 < 0 || temperature1 > 45)
   {
@@ -31,7 +31,7 @@ static int tempratureOK(float temperature1)
     return 0;
   }
 }
-static int   socOK(float soc1)
+ int   socOK(float soc1)
 {
   if (soc1 < 20 || soc1 > 80)
   {
@@ -39,7 +39,7 @@ static int   socOK(float soc1)
     return 0;
   }
 }
-static int    chargeRateOK(float chargeRate1)
+ int    chargeRateOK(float chargeRate1)
 {
   if (chargeRate1 > 0.8)
   {
