@@ -4,12 +4,18 @@
  int tempOK(float temperature, float soc, float chargeRate);
  int socOK(float soc, float chargeRate);
  int chargeRateOK(float chargeRate);
+int ErrorPrintstatus(const char *status);
+
+int ErrorPrintstatus(const char *status)
+{
+ print ("%s\n",status);
+ return 0;
+}
  int tempOK(float temperature, float soc, float chargeRate)
 { 
  if(temperature < 0 || temperature > 45)
  {
-   printf("Temperature out of range!\n");
-  return 0;
+  return ErrorPrintstatus("Temperature out of range!");
  }
   return socOK(soc,chargeRate);
 }
@@ -18,23 +24,17 @@
   
  if (soc < 20 || soc > 80)
  {
-   printf("State of Charge out of range!\n");
-  return 0;
+   return ErrorPrintstatus("State of Charge out of range!");
  }
   return chargeRateOK(chargeRate);
 }
  int chargeRateOK(float chargeRate)
 {
- 
   if (chargeRate > 0.8)
  {
-  printf("Charge Rate out of range!\n");
-  return 0;
+   return ErrorPrintstatus("Charge Rate out of range!");
  }
- else 
- {
-  return 1;
-  }
+ return 1;
 }
 
 
