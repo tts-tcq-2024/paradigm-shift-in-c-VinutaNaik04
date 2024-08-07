@@ -17,14 +17,17 @@ int batteryIsOk(float temperature, float soc, float chargeRate) {
   case 3:
    printf("Charge Rate out of range!\n");
    break;
-      break;
   default:
       break;
      }
- if (value==1||valu||2||value==3)
+ if (value==1||value==2||value==3)
+ {
   return 0;
+ }
  else 
+ {
   return 1;
+ }
 
 }
 
