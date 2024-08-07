@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <assert.h>
 
- int tempOK(temperature,soc,chargeRate)
+ int tempOK(float temperature, float soc, float chargeRate)
 { 
  int value;
   value = (temperature < 0 || temperature > 45)?1:0;
@@ -12,7 +12,7 @@
  }
  else 
  {
-  return socOK(soc,chargeRate)
+  return socOK(float soc, float chargeRate);
    }
 }
  int  socOK(soc,chargeRate)
@@ -26,10 +26,10 @@
  }
  else 
  {
-  return chargeRateOK(soc,chargeRate)
+  return chargeRateOK(chargeRate);
   }
 }
- int    chargeRateOK(chargeRate)
+ int chargeRateOK(float chargeRate)
 {
  int value3;
   value3= chargeRate > 0.8?1:0;
@@ -45,7 +45,7 @@
 }
 int batteryIsOk(float temperature, float soc, float chargeRate) {
 int return_value;
- return_value=tempOK(float temperature, float soc, float chargeRate);
+ return_value=tempOK(temperature,soc,chargeRate);
 
  return return_value;
 
