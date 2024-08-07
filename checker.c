@@ -12,7 +12,7 @@
  }
  else 
  {
-  return socOK(float soc, float chargeRate);
+  return socOK(soc,chargeRate);
    }
 }
  int  socOK(soc,chargeRate)
