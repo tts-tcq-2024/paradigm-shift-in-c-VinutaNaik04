@@ -33,6 +33,7 @@ int batteryIsOk(float temperature, float soc, float chargeRate) {
   int value1 =0;
   int value2 =0;
   int value3 =0;
+ int return_value=0;
   /* value = (temperature < 0 || temperature > 45)?1:(soc < 20 || soc > 80)?2:(chargeRate > 0.8)?3:4;
    switch (value)
      {
@@ -53,9 +54,9 @@ value1= tempratureOK(temperature);
 value2=  socOK(soc);
 value3= chargeRateOK(chargeRate);
 
+return_value=value1||value2||value3;
 
-
-return 1;
+return ;
 }
 
 int main() {
