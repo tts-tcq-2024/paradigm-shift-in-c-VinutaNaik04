@@ -1,20 +1,18 @@
 #include <stdio.h>
 #include <assert.h>
 
+ int tempOK(float temperature, float soc, float chargeRate);
+ int socOK(float soc, float chargeRate);
+ int chargeRateOK(float chargeRate);
  int tempOK(float temperature, float soc, float chargeRate)
 { 
- int value;
- int socOK(float, float);
-  value = (temperature < 0 || temperature > 45)?1:0;
- if (value ==1)
+ int value = (temperature < 0 || temperature > 45)
+ if (value)
  {
    printf("Temperature out of range!\n");
   return 0;
  }
- else 
- {
-  socOK(soc,chargeRate);
-   }
+  return socOK(soc,chargeRate);
 }
  int  socOK(float soc,float chargeRate)
 {
@@ -45,6 +43,7 @@
   return 1;
   }
 }
+*
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
 int return_value;
