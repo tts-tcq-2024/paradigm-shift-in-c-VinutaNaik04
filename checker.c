@@ -16,24 +16,18 @@
 }
  int  socOK(float soc,float chargeRate)
 {
- int value2;
-  int chargeRateOK(float);
-  value2 = (soc < 20 || soc > 80)?1:0;
- if (value2 ==1)
+  int value2 = (soc < 20 || soc > 80);
+ if (value2)
  {
    printf("State of Charge out of range!\n");
   return 0;
  }
- else 
- {
-  chargeRateOK(chargeRate);
-  }
+  return chargeRateOK(chargeRate);
 }
  int chargeRateOK(float chargeRate)
 {
- int value3;
-  value3= (chargeRate > 0.8)?1:0;
-   if (value3 ==1)
+ int value3=(chargeRate > 0.8);
+  if (value3)
  {
   printf("Charge Rate out of range!\n");
   return 0;
