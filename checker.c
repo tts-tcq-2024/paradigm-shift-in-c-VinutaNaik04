@@ -39,10 +39,8 @@
 
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
-int return_value;
- return_value=tempOK(temperature,soc,chargeRate);
-
- return return_value;
+ 
+ return tempOK(temperature,soc,chargeRate);
 
 }
 
