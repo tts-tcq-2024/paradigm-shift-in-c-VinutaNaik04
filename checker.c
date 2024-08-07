@@ -13,21 +13,13 @@ int ErrorPrintstatus(const char *status)
 }
  int tempOK(float temperature, float soc, float chargeRate)
 { 
- if(temperature < 0 || temperature > 45)
- {
-  return ErrorPrintstatus("Temperature out of range!");
- }
-  return socOK(soc,chargeRate);
+  return (temperature < 0 || temperature > 45)?ErrorPrintstatus("Temperature out of range!"):socOK(soc,chargeRate);
 }
  int  socOK(float soc,float chargeRate)
 {
-  
- if (soc < 20 || soc > 80)
- {
-   return ErrorPrintstatus("State of Charge out of range!");
+   return (soc < 20 || soc > 80)?ErrorPrintstatus("State of Charge out of range!"):chargeRateOK(chargeRate);
  }
-  return chargeRateOK(chargeRate);
-}
+ 
  int chargeRateOK(float chargeRate)
 {
   if (chargeRate > 0.8)
