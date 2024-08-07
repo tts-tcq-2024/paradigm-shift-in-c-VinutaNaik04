@@ -8,7 +8,7 @@ int ErrorPrintstatus(const char *status);
 
 int ErrorPrintstatus(const char *status)
 {
- print ("%s\n",status);
+ printf ("%s\n",status);
  return 0;
 }
  int tempOK(float temperature, float soc, float chargeRate)
