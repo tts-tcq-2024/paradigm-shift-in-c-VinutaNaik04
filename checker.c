@@ -1,62 +1,31 @@
 #include <stdio.h>
 #include <assert.h>
- int tempratureOK(temperature)
-{
-  if (temperature < 0 || temperature > 45)
-  {
-    printf("Temperature out of range!\n"); 
-   return 0;
-  }
-  return 1;
-}
- int   socOK(soc)
-{
-  if (soc < 20 || soc > 80)
-  {
-    printf("State of Charge out of range!\n");
-     return 0;
-  }
-  return 1;
-}
- int    chargeRateOK(chargeRate)
-{
-  if (chargeRate > 0.8)
-  {
-     printf("Charge Rate out of range!\n");
-   return 0;
-  }
-    return 1;
-}
+
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
-  
-  int value1 =0;
-  int value2 =0;
-  int value3 =0;
- int return_value=0;
-  /* value = (temperature < 0 || temperature > 45)?1:(soc < 20 || soc > 80)?2:(chargeRate > 0.8)?3:4;
+
+ int value=0;
+  value = (temperature < 0 || temperature > 45)?1:(soc < 20 || soc > 80)?2:(chargeRate > 0.8)?3:4;
    switch (value)
      {
     case 1:
     printf("Temperature out of range!\n");
+      break;
   case 2:
     printf("State of Charge out of range!\n");
+      break;
   case 3:
    printf("Charge Rate out of range!\n");
    break;
+      break;
   default:
-    return 1;
-  break;
+      break;
      }
+ if (value==1||valu||2||value==3)
   return 0;
-  */
-value1= tempratureOK(temperature);
-value2=  socOK(soc);
-value3= chargeRateOK(chargeRate);
+ else 
+  return 1;
 
-return_value=value1||value2||value3;
-
-return ;
 }
 
 int main() {
