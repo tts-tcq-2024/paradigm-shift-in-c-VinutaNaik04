@@ -16,7 +16,7 @@
   socOK(soc,chargeRate);
    }
 }
- int  socOK(soc,chargeRate)
+ int  socOK(float soc,float chargeRate)
 {
  int value2;
   int chargeRateOK(float);
