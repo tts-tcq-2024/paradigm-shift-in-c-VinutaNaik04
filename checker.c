@@ -6,7 +6,7 @@
  int chargeRateOK(float chargeRate);
  int tempOK(float temperature, float soc, float chargeRate)
 { 
- int value = (temperature < 0 || temperature > 45)
+ int value = (temperature < 0 || temperature > 45);
  if (value)
  {
    printf("Temperature out of range!\n");
