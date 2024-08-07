@@ -4,6 +4,7 @@
  int tempOK(float temperature, float soc, float chargeRate)
 { 
  int value;
+ int socOK(float, float);
   value = (temperature < 0 || temperature > 45)?1:0;
  if (value ==1)
  {
@@ -18,6 +19,7 @@
  int  socOK(soc,chargeRate)
 {
  int value2;
+  int chargeRateOK(float);
   value2 = (soc < 20 || soc > 80)?1:0;
  if (value2 ==1)
  {
