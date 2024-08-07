@@ -43,7 +43,7 @@
   return 1;
   }
 }
-*
+
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
 int return_value;
