@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <assert.h>
+#include <string.h>
 /*
 int tempOK(float temperature, float soc, float chargeRate);
 int socOK(float soc, float chargeRate);
@@ -11,7 +12,7 @@ int ErrorPrintstatus(int *BatteryTempSocChargeNOK, const char *status, int strle
 {
  for (int count=0;BatteryTempSocChargeNOK[count]!=0&&count<strlength;count++)
   {
-   printf ("%s\n", *status[count]);
+   printf ("%s\n", status[count][]);
    return 0;
   }
  return 1;
