@@ -9,12 +9,10 @@ int ErrorPrintstatus(int *BatteryTempSocChargeNOK);
 
 int ErrorPrintstatus(int *BatteryTempSocChargeNOK)
 {
- const char *status0= Temperature out of range!;
- const char *status1= State of Charge out of rangee!;
- const char *status2= Charge Rate out of range;
+ const char status[][]={"Temperature out of range!","State of Charge out of range!","State of Charge out of range!"}
  for (int count=0;BatteryTempSocChargeNOK[count]!=0;count++)
   {
-   printf ("%s\n",status0);
+   printf ("%s\n", status[count]);
    return 0;
   }
  return 1;
@@ -24,7 +22,7 @@ int ErrorPrintstatus(int *BatteryTempSocChargeNOK)
 { 
   return (temperature < 0 || temperature > 45)?ErrorPrintstatus("Temperature out of range!"):socOK(soc,chargeRate);
 }*/
- int  socOK(float soc,float chargeRate)
+ /*int  socOK(float soc,float chargeRate)
 {
    return (soc < 20 || soc > 80)?ErrorPrintstatus("State of Charge out of range!"):chargeRateOK(chargeRate);
  }
@@ -34,7 +32,7 @@ int ErrorPrintstatus(int *BatteryTempSocChargeNOK)
  
   return (chargeRate > 0.8)?ErrorPrintstatus("Charge Rate out of range!"):1;
 
-}
+}*/
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
 /* int Temp_RangeNOK =temperature < 0 || temperature > 45;
