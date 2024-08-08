@@ -1,15 +1,23 @@
 #include <stdio.h>
 #include <assert.h>
-
+/*
 int tempOK(float temperature, float soc, float chargeRate);
 int socOK(float soc, float chargeRate);
 int chargeRateOK(float chargeRate);
-int ErrorPrintstatus(const char *status);
+*/
+int ErrorPrintstatus(int *BatteryTempSocChargeNOK);
 
-int ErrorPrintstatus(const char *status)
+int ErrorPrintstatus(int *BatteryTempSocChargeNOK)
 {
- printf ("%s\n",status);
- return 0;
+ const char *status0= Temperature out of range!;
+ const char *status1= State of Charge out of rangee!;
+ const char *status2= Charge Rate out of range;
+ for (int count=0;BatteryTempSocChargeNOK[count]!=0;count++)
+  {
+   printf ("%s\n",status0);
+   return 0;
+  }
+ return 1;
 }
 /*
  int tempOK(float temperature, float soc, float chargeRate)
@@ -29,12 +37,12 @@ int ErrorPrintstatus(const char *status)
 }
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
- int Temp_RangeNOK =temperature < 0 || temperature > 45;
+/* int Temp_RangeNOK =temperature < 0 || temperature > 45;
  int Soc_RangeNOK=soc < 20 || soc > 80;
- int ChargeRate_NOK= chargeRate > 0.8;
- return Temp_RangeNOK?ErrorPrintstatus("State of Charge out of range!"):Soc_RangeNOK?ErrorPrintstatus("State of Charge out of range!"):ChargeRate_NOK?ErrorPrintstatus("Charge Rate out of range!"):1;
+ int ChargeRate_NOK= chargeRate > 0.8;*/
+ int BatteryTempSocChargeNOK[]={temperature < 0 || temperature > 45,soc < 20 || soc > 80,chargeRate > 0.8]
+ return ErrorPrintstatus(int *BatteryTempSocChargeNOK);
  
-
 }
 
 
