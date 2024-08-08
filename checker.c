@@ -23,11 +23,9 @@ int ErrorPrintstatus(const char *status)
  
  int chargeRateOK(float chargeRate)
 {
-  if (chargeRate > 0.8)
- {
-   return ErrorPrintstatus("Charge Rate out of range!");
- }
- return 1;
+ 
+  return (chargeRate > 0.8)?ErrorPrintstatus("Charge Rate out of range!"):1;
+
 }
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
