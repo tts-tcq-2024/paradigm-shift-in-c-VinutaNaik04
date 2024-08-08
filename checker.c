@@ -11,6 +11,7 @@ int ErrorPrintstatus(const char *status)
  printf ("%s\n",status);
  return 0;
 }
+/*
  int tempOK(float temperature, float soc, float chargeRate)
 { 
   return (temperature < 0 || temperature > 45)?ErrorPrintstatus("Temperature out of range!"):socOK(soc,chargeRate);
@@ -28,11 +29,24 @@ int ErrorPrintstatus(const char *status)
  }
  return 1;
 }
+*/
 
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
- return tempOK(temperature,soc,chargeRate);
-
+ //return tempOK(temperature,soc,chargeRate);
+ if (temperature < 0 || temperature > 45)
+ {
+  return ErrorPrintstatus("Temperature out of range!");
+ }
+ if (soc < 20 || soc > 80)
+ {
+  return ErrorPrintstatus("State of Charge out of range!");
+ }
+ if (chargeRate > 0.8)
+ {
+   return ErrorPrintstatus("Charge Rate out of range!");
+ }
+return 1;
 }
 
 
