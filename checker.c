@@ -30,7 +30,7 @@ int ErrorPrintstatus(const char *status)
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
  if  (temperature < 0 || temperature > 45)
-        ErrorPrintstatus("Temperature out of range!")
+        ErrorPrintstatus("Temperature out of range!");
          else 
          socOK(soc,chargeRate);
  /*if (temperature < 0 || temperature > 45)
