@@ -39,7 +39,7 @@ int batteryIsOk(float temperature, float soc, float chargeRate) {
  int ChargeRate_NOK= chargeRate > 0.8;*/
  int BatteryTempSocChargeNOK[]={temperature < 0 || temperature > 45,soc < 20 || soc > 80,chargeRate > 0.8};
  int strlength=len(BatteryTempSocChargeNOK);
- const char status[strlength][]={"Temperature out of range!","State of Charge out of range!","State of Charge out of range!"};
+ const char status[strlength][50]={"Temperature out of range!","State of Charge out of range!","State of Charge out of range!"};
  return ErrorPrintstatus(*BatteryTempSocChargeNOK, *status, strlength);
 }
 
