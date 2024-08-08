@@ -45,7 +45,8 @@ int batteryIsOk(float temperature, float soc, float chargeRate) {
    return ErrorPrintstatus("Charge Rate out of range!");
  }
 return 1;
-}*/
+ */
+}
 
 
 int main() {
