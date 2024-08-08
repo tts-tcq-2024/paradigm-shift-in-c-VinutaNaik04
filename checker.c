@@ -31,7 +31,7 @@ int ErrorPrintstatus(const char *status)
 }
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
- return return (temperature < 0 || temperature > 45)?ErrorPrintstatus("Temperature out of range!"):socOK(soc,chargeRate);
+ return (temperature < 0 || temperature > 45)?ErrorPrintstatus("Temperature out of range!"):socOK(soc,chargeRate);
  /*if (temperature < 0 || temperature > 45)
  {
   return ErrorPrintstatus("Temperature out of range!");
