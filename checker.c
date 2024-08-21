@@ -8,11 +8,11 @@ int chargeRateOK(float chargeRate);
 */
 int ErrorPrintstatus(int value, const char *status);
 
-int ErrorPrintstatus(int value, const char *status, int strlength)
+int ErrorPrintstatus(int value, const char *status)
 {
  if (value==1)
   {
-   printf ("%s\n", status[count][]);
+   printf("%s is out of range\n", status);
    return 0;
   }
  return 1;
