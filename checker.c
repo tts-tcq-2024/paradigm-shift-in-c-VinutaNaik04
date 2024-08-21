@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <assert.h>
 
-int ErrorPrintstatus(float value const char *ParamName);
+int ErrorPrintstatus(float value, const char *ParamName);
 
-int ErrorPrintstatus(float value const char *ParamName)
+int ErrorPrintstatus(float value, const char *ParamName)
 {
  
    printf("%s is out of range (Value: %.2f)\n", ParamName, value);
